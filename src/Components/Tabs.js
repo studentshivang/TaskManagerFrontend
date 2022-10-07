@@ -8,7 +8,7 @@ import Feed from './Feed/Feed';
 import MyFeed from './MyFeed/MyFeed';
 import SavedPosts from './SavedPosts/SavedPosts';
 import TasksManagement from './TasksManagement/TasksManagement';
-import TasksDashboard from './TasksDashboard/Feed';
+import TasksDashboard from './TasksDashboard/TaskDashboard';
 import MyProfile from './MyProfile/MyProfile';
 
 function TabPanel(props) {
@@ -61,7 +61,8 @@ export default function VerticalTabs() {
         value={value}
         onChange={handleChange}
         aria-label="Vertical tabs example"
-        sx={{ borderRight: 1, borderColor: 'divider' }}
+        sx={{ borderRight: 1, borderColor: 'divider',position:'fixed' }}
+        style={{marginRight:'100px'}}
       >
         <Tab label="Feed" {...a11yProps(0)} />
         <Tab label="My Feed" {...a11yProps(1)} />
@@ -71,22 +72,34 @@ export default function VerticalTabs() {
         <Tab label="My Profile" {...a11yProps(5)} />
       </Tabs>
       <TabPanel value={value} index={0}>
+        <div className='tabspanel'>
         <Feed/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={1}>
+        <div className='tabspanel'>
         <MyFeed/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={2}>
+        <div className='tabspanel'>
         <SavedPosts/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={3}>
+        <div className='tabspanel'>
         <TasksManagement/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={4}>
+        <div className='tabspanel'>
         <TasksDashboard/>
+        </div>
       </TabPanel>
       <TabPanel value={value} index={5}>
+        <div className='tabspanel'>
         <MyProfile/>
+        </div>
       </TabPanel>
     </Box>
   );
