@@ -1,7 +1,24 @@
+import Post from "../Posts/Post";
+
 const Feed = () => {
   return (
     <>
-      <h1>Hello from the feed side!</h1>
+      <div className="container">
+        <div className="row">
+          <div className="col-12 ms-5">
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+            <Post />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
